@@ -5,11 +5,11 @@ function App() {
   const [value, setValue] = React.useState(0)
 
   const increment = () => {
-    setValue(value+1)
+    setValue(previousCount => previousCount + 1)
   }
 
   const decrement = () => {
-    setValue(value-1)
+    setValue(previousCount => previousCount - 1)
   }
 
   return (
