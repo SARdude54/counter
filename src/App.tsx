@@ -14,9 +14,9 @@ function App() {
 
   return (
     <div className="App">
-      <button className="add" onClick={increment}></button>
-      <div className='display'>{value}</div>
-      <button className="subtract" onClick={decrement}></button>
+      <button className="add" onClick={increment}>+</button>
+      <div className='display'><h1>{value}</h1></div>
+      <button className="subtract" onClick={decrement}>-</button>
     </div>
   );
 }
