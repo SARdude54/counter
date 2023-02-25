@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+
+  const [value, setValue] = React.useState(0)
+
+  const increment = () => {
+    setValue(value+1)
+  }
+
+  const decrement = () => {
+    setValue(value-1)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button className="add" onClick={increment}></button>
+      <div className='display'>{value}</div>
+      <button className="subtract" onClick={decrement}></button>
     </div>
   );
 }
